@@ -1,29 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { useSelector } from 'react-redux';
 import styles from './App.module.css'
-import Navi from "../layouts/navi/Navi";
-import Header from "../layouts/header/Header";
-import TimePrice from "../layouts/timeprice/TimePrice";
-import AskedQuestions from "../layouts/Asked Questions/AskedQuestions";
-import SuccessHistory from "../layouts/successhistory/SuccessHistory";
-import Footer from "../layouts/footer/Footer";
-import HaveProject from "../layouts/haveProject/HaveProject";
-import Program from "../layouts/program/Program";
-
+import Dashboard from "./Dashboard";
 
 const App = () => {
 
+    // const [departments, setDepartments] = useState([]);
+    // const departmentCollection = collection(db, "Departments");
+    //
+    // useEffect(() => {
+    //     const getDepartments = async () => {
+    //         const users = await getDocs(departmentCollection);
+    //         setDepartments(users.docs.map((doc) => ({...doc.data(), id: doc.id})));
+    //         return   users;
+    //     }
+    //     getDepartments().then(r => console.log(r));
+    // }, [])
+
+
+
+
     return (
         <div className={styles.appContainer}>
-           <>
-               <Navi/>
-               <Header/>
-               <Program/>
-               <TimePrice/>
-               <AskedQuestions/>
-               <SuccessHistory/>
-               <HaveProject/>
-               <Footer/>
-           </>
+            <Dashboard/>
         </div>
     );
 };
